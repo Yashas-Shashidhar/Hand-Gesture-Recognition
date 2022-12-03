@@ -25,7 +25,7 @@ def peer2(img):
     # font = cv2.FONT_HERSHEY_SIMPLEX
     # cv2.putText(img,labels['class'][ans],(10,400), font, 4,(255,255,255),2,cv2.LINE_AA)
 #img = cv2.imread("/Users/shreenidhir/Documents/Machine learning/project_18nov/rps_data/scissors/2l1K148aIJHRR1q7.png")
-img=cv2.imread("/Users/shreenidhir/Documents/Machine learning/project_18nov/contour_folder/contour_input/G6trRFSUGIeaQorS.png")
+img=cv2.imread("img_name.png")
 th3 = peer2(img)
 kernel = np.ones((7,7), np.uint8)
 closing = cv2.morphologyEx(th3, cv2.MORPH_CLOSE, kernel)
