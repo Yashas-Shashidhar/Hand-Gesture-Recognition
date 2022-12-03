@@ -109,7 +109,7 @@ class CNNNet(nn.Module):
 
 model = CNNNet()
 print(model)
-model.load_state_dict(torch.load('/Users/shreenidhir/Documents/Machine learning/project_18nov/hand_gesture_code/output_model/model_alexnet_new_data_40epochs.pt'))
+model.load_state_dict(torch.load('./model_alexnet_new_data_40epochs.pt'))
 classes=['rock','paper','scissors']
 class_pred_li=[]
 x_li=[]
@@ -117,7 +117,7 @@ y_li=[]
 direction=" "
 # Create a VideoCapture object and read from input file
 # If the input is the camera, pass 0 instead of the video file name
-cap = cv2.VideoCapture('/Users/shreenidhir/Documents/Machine learning/project_18nov/hand_gesture_code/downloaded videos/rock.mp4')
+cap = cv2.VideoCapture('./rock.mp4')
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
  
@@ -128,7 +128,7 @@ if (cap.isOpened()== False):
 # Read until video is completed
 i=0
 
-out = cv2.VideoWriter('outpy_paper_1.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (frame_width,frame_height))
+out = cv2.VideoWriter('output.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (frame_width,frame_height))
 while(cap.isOpened()):
   # Capture frame-by-frame
   ret, frame = cap.read()
