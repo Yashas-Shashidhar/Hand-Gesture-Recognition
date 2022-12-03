@@ -140,7 +140,6 @@ while(cap.isOpened()):
     frame_re=cv2.resize(frame, (300,200))
     #frame_re=frame_re.reshape(300,200,3)
     print("frame shape==",frame_re.shape)
-    cv2.imwrite("/Users/shreenidhir/Documents/Machine learning/project_18nov/check_frames/"+str(i)+".png",frame_re)
     im = Image.fromarray(frame_re)
     image = transform(im)
     image = image.reshape(1,3, 300, 200)
