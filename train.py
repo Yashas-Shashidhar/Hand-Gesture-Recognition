@@ -209,10 +209,10 @@ print(model)
 #           "horse", "ship", "truck"]
 =====Data orginal End=======
 '''
-training_data=Rpsdata("/Users/shreenidhir/Documents/Machine learning/project_18nov/rps_train_test_val_split/train_1/")
+training_data=Rpsdata("./rps_train_test_val_split/train_1/")
 train_loader = DataLoader(training_data, batch_size=batch_size, shuffle=True)
 
-validation_data=Rpsdata("/Users/shreenidhir/Documents/Machine learning/project_18nov/rps_train_test_val_split/val/")
+validation_data=Rpsdata("./rps_train_test_val_split/val/")
 valid_loader=DataLoader(validation_data,batch_size=batch_size,shuffle=True)
 
 criterion = nn.CrossEntropyLoss()
@@ -289,7 +289,7 @@ def main():
             print('Validation loss decreased ({:.6f} --> {:.6f}).  Saving model ...'.format(
             valid_loss_min,
             valid_loss))
-            torch.save(model.state_dict(), './output_model/model_alexnet_new_data_40epochs.pt')
+            torch.save(model.state_dict(), './model_alexnet_new_data_40epochs.pt')
             valid_loss_min = valid_loss
 
 
